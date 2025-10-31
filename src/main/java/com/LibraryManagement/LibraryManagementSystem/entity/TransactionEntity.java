@@ -1,0 +1,31 @@
+package com.LibraryManagement.LibraryManagementSystem.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Getter
+@Setter
+public class TransactionEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    private long studentId;
+
+    private long bookId;
+
+
+    private String type; // "BUY" or "RENT"
+
+    private double amount;
+
+    private LocalDateTime date;
+}
