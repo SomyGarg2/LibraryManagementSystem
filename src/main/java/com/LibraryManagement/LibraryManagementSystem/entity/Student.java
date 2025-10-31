@@ -10,20 +10,14 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class BookEntity {
 
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String title;
+    private String name;
 
-    private String author;
-
-    private double price;
-
-    private double rentPrice;
-
-    private int stock;
+    private double walletBalance ;
 
 }

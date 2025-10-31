@@ -7,16 +7,25 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
+public class Transaction {
 
-public class StudentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String name;
+    private long studentId;
 
-    private double walletBalance ;
+    private long bookId;
+
+
+    private String type; // "BUY" or "RENT"
+
+    private double amount;
+
+    private LocalDateTime date;
 }
